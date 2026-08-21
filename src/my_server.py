@@ -1,6 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import os
 import urllib.parse
+import webbrowser
 import time
 import threading
 
@@ -48,6 +49,9 @@ class MyServer(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     webServer = HTTPServer((hostName, serverPort), MyServer)
     print(f"Старт соединения http://{hostName}:{serverPort}")
+
+    url = f"http://{hostName}:{serverPort}"
+    threading.Timer(1, lambda: webbrowser.open(url)).start()
 
     server_thread = threading.Thread(target=webServer.serve_forever)
     server_thread.start()

@@ -3,16 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>blog.ru</title>
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet"/>
+    <title>Контакты</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Форма обратной связи</h1>
-    <form method="POST" action="/">
-        <input type="text" name="name" placeholder="Имя" required><br>
-        <input type="email" name="email" placeholder="Email" required><br>
-        <textarea name="message" placeholder="Сообщение" required></textarea><br>
-        <button type="submit">Отправить</button>
-    </form>
+    <div class="row">
+        <div class="col-2">
+            <div class="min-vh-100 m-0 p-0 bg-black text-white">
+                <nav class="navbar bg-transparent border-bottom border-light">  <!-- прозрачный фон -->
+                    <div class="container-fluid">
+                        <a class="navbar-brand text-white" href="#">  <!-- добавили text-white -->
+                            <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-white.svg" alt="Bootstrap" width="30" height="24"
+                                 class="d-inline-block align-text-top">
+                            Меню
+                        </a>
+                    </div>
+                </nav>
+                <nav class="nav flex-column p-3">
+                    <a class="nav-link text-white" href="#">Главная</a>
+                    <a class="nav-link text-white" href="#">Категории</a>
+                    <a class="nav-link text-white" href="#">Заказы</a>
+                    <a class="nav-link text-white active" href="#">Контакты</a>
+                </nav>
+            </div>
+
+        </div>
+        <div class="col-10">
+            <h1>Контакты</h1>
+        </div>
+    </div>
 </body>
 </html>
