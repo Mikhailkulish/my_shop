@@ -2,7 +2,6 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import os
 import urllib.parse
 import webbrowser
-import time
 import threading
 
 hostName = "localhost" # Адрес для доступа по сети

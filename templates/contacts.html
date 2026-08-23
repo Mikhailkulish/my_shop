@@ -1,36 +1,120 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Контакты</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
-<body>
-    <div class="row">
-        <div class="col-2">
-            <div class="min-vh-100 m-0 p-0 bg-black text-white">
-                <nav class="navbar bg-transparent border-bottom border-light">  <!-- прозрачный фон -->
-                    <div class="container-fluid">
-                        <a class="navbar-brand text-white" href="#">  <!-- добавили text-white -->
-                            <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-white.svg" alt="Bootstrap" width="30" height="24"
-                                 class="d-inline-block align-text-top">
-                            Меню
-                        </a>
-                    </div>
-                </nav>
-                <nav class="nav flex-column p-3">
-                    <a class="nav-link text-white" href="#">Главная</a>
-                    <a class="nav-link text-white" href="#">Категории</a>
-                    <a class="nav-link text-white" href="#">Заказы</a>
-                    <a class="nav-link text-white active" href="#">Контакты</a>
-                </nav>
-            </div>
 
+<body>
+    <div class="row h-100 m-0">
+        <!-- Сайдбар -->
+        <div class="col-2 h-100 m-0 p-0 bg-black text-white d-flex flex-column"> <!-- добавил d-flex flex-column -->
+            <nav class="navbar bg-transparent border-bottom border-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white" href="#">
+                        <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-white.svg"
+                            alt="Bootstrap" width="30" height="24" class="d-inline-block align-text-top">
+                        Меню
+                    </a>
+                </div>
+            </nav>
+            <nav class="nav flex-column p-3">
+                <a class="nav-link text-white d-flex align-items-center" href="#">
+                    <i class="bi bi-house-door me-2"></i>Главная
+                </a>
+                <a class="nav-link text-white d-flex align-items-center" href="#">
+                    <i class="bi bi-speedometer2 me-2"></i>Категории
+                </a>
+                <a class="nav-link text-white d-flex align-items-center" href="#">
+                    <i class="bi bi-calendar3 me-2"></i>Заказы
+                </a>
+                <a class="nav-link text-white active d-flex align-items-center" href="#">
+                    <i class="bi bi-person-circle me-2"></i>Контакты
+                </a>
+            </nav>
+
+            <!-- Блок с профилем внизу -->
+            <div class="mt-auto p-3 border-top border-light">
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle w-100 text-start d-flex align-items-center"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                        style="background: transparent; border: none; padding: 10px;">
+                        <img src="https://emektep.kz/bitrix/templates/eshop_bootstrap_v4_EMEKTEP_1/components/bitrix/catalog.element/template_UROKI_AVATAR/images/no_photo.png"
+                            alt="avatar" class="rounded-circle me-2" width="40" height="40">
+                        <div>
+                            <div class="fw-bold">Пользователь</div>
+                        </div>
+                    </button>
+                    <ul class="dropdown-menu w-80"
+                        style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 8px;">
+                        <li>
+                            <a class="dropdown-item text-white" href="#">
+                                </i>Профиль
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider" style="border-color: #333;">
+                        </li>
+                        <li>
+                            <a class="dropdown-item text-white" href="#">
+                                </i>Выход
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-10">
-            <h1>Контакты</h1>
+
+        <!-- Основной контент -->
+        <div class="col-10 h-100 d-flex flex-column justify-content-center" style="padding: 0 40px;">
+            <h1 class="text-center">Контакты</h1>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="card p-4 shadow-sm mt-5 mx-auto" style="max-width: 400px;">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nameInput" class="form-label">Имя</label>
+                                <input type="text" class="form-control" id="nameInput" placeholder="Ваше имя">
+                            </div>
+                            <div class="mb-3">
+                                <label for="emailInput" class="form-label">Почта</label>
+                                <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="messageTextarea" class="form-label">Сообщение</label>
+                                <textarea class="form-control" id="messageTextarea" rows="3"
+                                    placeholder="Введите ваше сообщение"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-4 mt-5 mx-auto" style="max-width: 400px;">
+                        <h3 class="fw-bold">Наши контакты</h3>
+                        <p class="text-secondary">Some quick example text to build on the card title and make up the
+                            bulk
+                            of the card's content.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Подключаем Bootstrap JS для работы dropdown -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
